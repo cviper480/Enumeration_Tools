@@ -104,6 +104,6 @@ nmap --min-rate 4500 --max-rtt-timeout 1500ms -sU -Pn --top-ports=20 -vv "$targe
 # 3. Final TCP Scan (-sCV)
 #########################
 echo -e "${pink}========================================================${reset}"
-echo -e "${pink}Running final TCP scan (-A) on ports: $open_ports${reset}"
+echo -e "${pink}Running final TCP scan (-sCV) on ports: $open_ports${reset}"
 echo -e "${pink}========================================================${reset}"
 nmap -sCV -Pn -p "$open_ports" "$target" | highlight
