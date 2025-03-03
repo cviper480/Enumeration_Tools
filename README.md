@@ -1,4 +1,4 @@
-# Nmap Scan Script with Custom Highlighting
+# Better_Map
 
 This repository contains a Bash script that performs multiple Nmap scans on a target IP address and highlights the output using a custom AWK-based highlighting function. The script is designed for reconnaissance and penetration testing (only use it on networks you are authorized to scan).
 
@@ -15,7 +15,6 @@ This repository contains a Bash script that performs multiple Nmap scans on a ta
 
 ## Requirements
 
-- **Bash** (tested on Linux)
 - **Nmap** (version 7.95 or later)
 
 *No additional dependencies are required since the highlighting functionality is built into the script.*
@@ -40,7 +39,7 @@ This repository contains a Bash script that performs multiple Nmap scans on a ta
 3. **Run the script with a target IP address or hostname:**
 
     ```bash
-    ./test5.sh 192.168.216.121
+    ./better_map.sh 192.168.216.121
     ```
 
    The script will perform the following scans sequentially:
