@@ -75,9 +75,9 @@ reset="\033[0m"
 #########################
 tmpfile=$(mktemp)
 
-echo -e "${pink}==========================================${reset}"
+echo -e "${pink}========================================================${reset}"
 echo -e "${pink}Running full TCP scan (-p-) on $target${reset}"
-echo -e "${pink}==========================================${reset}"
+echo -e "${pink}========================================================${reset}"
 nmap --min-rate 4500 --max-rtt-timeout 1500ms -p- -Pn -vv "$target" -oN "$tmpfile" | highlight
 
 # Extract open TCP port lines (e.g., "80/tcp   open  http") and filter out duplicates.
@@ -95,15 +95,15 @@ rm "$tmpfile"
 #########################
 # 2. UDP Scan (-sU)
 #########################
-echo -e "${pink}==========================================${reset}"
+echo -e "${pink}========================================================${reset}"
 echo -e "${pink}Running UDP scan (-sU) on $target${reset}"
-echo -e "${pink}==========================================${reset}"
+echo -e "${pink}========================================================${reset}"
 nmap --min-rate 4500 --max-rtt-timeout 1500ms -sU -Pn --top-ports=20 -vv "$target" | highlight
 
 #########################
 # 3. Final TCP Scan (-sCV)
 #########################
-echo -e "${pink}==========================================${reset}"
+echo -e "${pink}========================================================${reset}"
 echo -e "${pink}Running final TCP scan (-A) on ports: $open_ports${reset}"
-echo -e "${pink}==========================================${reset}"
+echo -e "${pink}========================================================${reset}"
 nmap -sCV -Pn -p "$open_ports" "$target" | highlight
