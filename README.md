@@ -41,7 +41,11 @@ This repository contains a Bash script that performs multiple Nmap scans on a ta
     ```bash
     ./better_map.sh 192.168.216.121
     ```
-
+4. **Make it globally executable:**
+   ```
+   chmod +x better_map.sh && sudo cp better_map.sh /usr/local/bin/better_map
+   ```
+   
    The script will perform the following scans sequentially:
    - **Full TCP Scan (-p-)**: Scans all TCP ports and extracts open ports.
    - **UDP Scan (-sU)**: Scans the top 20 UDP ports.
