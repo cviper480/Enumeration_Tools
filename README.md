@@ -41,7 +41,7 @@ This repository contains a Bash script that performs multiple Nmap scans on a ta
     ```bash
     ./better_map.sh 192.168.216.121
     ```
-4. **Make it globally executable:**
+4. **Make it executable:**
    ```
    chmod +x better_map.sh && sudo cp better_map.sh /usr/local/bin/better_map
    ```
